@@ -1,13 +1,20 @@
 import './App.css';
+import AddTransaction from './components/AddTransaction/AddTransaction';
 import Balance from './components/Balance/Balance';
 import Header from './components/Header/Header';
+import IncomeExpenses from './components/IncomeExpenses/IncomeExpenses';
+import TransactionList from './components/TransactionList/TransactionList';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Header />
       <Balance />
-    </div>
+      <IncomeExpenses />
+      <TransactionList />
+      <AddTransaction />
+    </GlobalProvider>
   );
 }
 
